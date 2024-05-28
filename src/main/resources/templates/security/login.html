@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body>
+	<main class="row mt-2">
+		<form action="@{/security/login">
+			<div class="card">
+				<div class="card-header">
+					SHOPPING CART LOGIN
+				</div>
+				<div class="card-body">
+					<div class="form-grop">
+						<label>Username</label>
+						<input type="text" placeholder="sfsdf" name="username" class="form-control" />
+					</div>
+					<div class="form-grop">
+						<label>Password</label>
+						<input type="password" name="password" class="form-control" />
+					</div>
+					<div class="form-grop">
+						<label class="checkbox-inline">
+						<input type="checkbox" name="remember-me" class="form-control" />Remember me?
+						</label>
+						
+					</div>
+					<div class="card-footer text-end">
+					<i class="text-danger" th:text="${message}"></i>
+						<button class="btn btn-sccess"></button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</main>
+</html>
